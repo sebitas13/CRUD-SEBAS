@@ -166,10 +166,10 @@ function actualizarTabla(){
                     
                 </td>
                 <td >
-                    <img data-id=${e._id} class="icon" src="./assets/images/icons/edit.png" alt="" onclick = onclickEditImagen(this)>
+                    <img data-id=${e._id} class="icon" src="assets/images/icons/edit.png" alt="" onclick = onclickEditImagen(this)>
                 </td>
                 <td > 
-                    <img data-id=${e._id} class="icon" src="./assets/images/icons/delete484611.png" alt="" onclick = onclickBorrarImagen(this) >
+                    <img data-id=${e._id} class="icon" src="assets/images/icons/delete484611.png" alt="" onclick = onclickBorrarImagen(this) >
                 </td>
             </tr>
             `   
