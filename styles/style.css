@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 24px;
+    font-family: 'Roboto';
+    background-color: #1F1F1F;
+}
+
+/* header {
+    display: flex;
+    width: 100%;
+    background-color: blue;
+    height: 15vh;
+    position: sticky;
+    top: 0;
+} */
+
+
+header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky; /*Al asignar un posicion podemos asignarle el top*/
+    top: 0; /*Importante */
+    z-index: 1;
+    
+    height: 15vh;
+    padding-bottom: 0.5rem;
+    
+
+    /* background-color: #0047BA; */
+    background-color: #14171A;
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+    
+}
+
+
+
+.opciones {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: end;
+    background-color: #333333;
+    position: sticky;
+    top: 6.6rem;
+    max-width: 100%;
+}
+
+.opciones .icon-add {
+    width: 3rem;
+    
+    cursor: pointer; 
+}
+
+.caja-busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    margin-right: 2rem;
+}
+
+.caja-busqueda #busqueda{
+    width: 80%;
+    height: 2rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    border: 2px solid #5532A0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: gray;
+    font-weight: 700;
+    
+}
+
+
+.icono-lupa {
+    width: 1.5rem; 
+    height: 1.5rem; 
+}
+
+
+
+header .logo-ingles img {
+    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+
+header .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    /* background-color: #0047BA; */
+    background-color: #14171A;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.207);
+    list-style-type: none; /*Esto lo cambie por el display de abajo*/
+}
+
+header .menu .logo-home {
+    width: 15%;
+    
+}
+
+/* --------------------------- */
+main {
+    height: auto;
+    width: 100%;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* margin-top: 3rem; */
+}
+
+@media (max-width:720px){
+    /* main{
+        flex-direction: column;
+        align-items: center;
+        
+    } */
+
+    aside {
+        width: 90% !important;
+    }
+
+    table td {
+        font-size: 1rem;
+      
+    }
+
+    .opciones {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caja-busqueda {
+        width: 60%;
+        margin-bottom: 1rem;
+        margin-left: 4.5rem;
+    }
+
+    #btnLimpiar {
+        width: 50%;
+        margin: 1rem !important;
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    /* background-color:burlywood ; */
+    font-size: 1.2rem;
+}
+
+
+
+
+/* Contenedor de la tabla */
+.container-tabla {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1F1F1F;
+    
+    overflow: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+
+/* TABLE */
+
+table {
+    /* background-color: azure; */
+    background-color: #333333;
+    padding: 1rem;
+    margin: 0 auto; /*para centrar la tabla a pesar del flex-left*/
+    
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid gray;
+    box-sizing: border-box; 
+}
+
+table th{
+    padding: 0.7rem 1rem;
+    color: white;
+    font-weight: 600;
+    /* background-color: goldenrod; */
+    background-color: #5532A0;
+    font-size: 1rem;
+}
+
+table td {
+    border: 1px solid white; 
+    font-size: 1rem;  
+    padding: 0.5rem 2rem;
+    color: white;
+}
+
+table tr:nth-child(odd) {
+    /* background-color:seashell; */
+    background-color: #1F1F1F;
+}
+
+table td:first-child{
+    font-weight: bold;  
+}
+
+table .litle-image {
+    width: 5rem;
+    height: 5rem;
+}
+
+table .icon{
+    width: 1.2rem;
+    cursor: pointer;  
+}
+
+table .icon img:hover {
+    transform: scale(1.3);
+}
+
+
+
+/* formulario */
+
+aside{
+    background-color: rgb(51, 51, 51,0.8);
+    /* background-color: #1F1F1F; */
+    height: 80vh;
+    padding: 1rem;    
+    width: 450px;
+    box-sizing: border-box;
+    /* overflow-x: auto; */
+    /* overflow: auto; */
+    font-size: 1.2rem;
+
+    /*deplazar  */
+    position: fixed;
+    right: -650px;
+    transition: 600ms ease-in-out;
+    
+}
+
+
+aside .imagen {
+    overflow: auto;
+    text-align: center;
+    margin: 1rem;
+    
+}
+
+
+aside .icon-remove {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    cursor: pointer; 
+    
+}
+
+aside form {
+    box-sizing: border-box;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #1F1F1F;
+    /* background-color: chartreuse; */
+    overflow-y: auto;
+    border: 1px solid white;
+    max-height: 100%
+}
+
+aside form #name {
+    box-sizing: border-box;
+    height: 2rem;
+    font-size: 1rem;
+    
+    border: 2px solid white;
+    border-radius: 5px;
+   
+    color: white;
+    
+    background-color: #333333;
+    width: 100%;
+}
+
+aside form textarea {
+    
+    font-size: 1rem;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    
+    background-color: #333333;
+}
+
+aside form select {
+    background-color: #333333;
+    color: white;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    overflow: auto;
+}
+
+#inputImagen {
+    background-color: #333333;
+    color: white;
+}
+
+
+
+#btnLimpiar{
+    color: #5532A0;
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    border-radius: 10px;
+    border: 2px solid #5532A0;
+    margin: 0 1rem;
+    height: 2.4rem;
+    cursor: pointer;
+    
+}
+
+#tablaVacio {
+    background-color: red;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+#btnAgregar {
+    color: #5532A0;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    border: 2px solid #5532A0;
+}
+
+label p {
+    color: #5532A0;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+aside form #imagenFormulario{
+    border: 1px solid white;
+    width: 5rem;
+}
+
+.tarjeta-zoom {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin: auto;
+    padding: 1rem;
+    background-color: #333333;
+    height: 80vh;
+    width: 30vw;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1;
+    
+}
+
+
+.tarjeta-zoom #btnClose {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    border-radius: 10px;
+    border: 2px solid #5532A0;
+    margin: 0 1rem;
+    cursor: pointer;
+    height: 1rem;
+    
+}
+
+.tarjeta-zoom #imagen_descripcion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    overflow: auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tarjeta-zoom h6 {
+    color: #5532A0;
+    font-weight: inherit;
+    font-size: 1rem;
+}
+
+.tarjeta-zoom p {
+    
+    /* margin: auto; */
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tarjeta-zoom label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center ;
+    
+    max-width: 100%;
+    margin: 0.2rem 0.5rem;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+
+@media (max-width:720px){
+    .tarjeta-zoom {
+        width: 80vw;
+    }
+}
+
+
+.tarjeta-zoom #imagen_zoom{
+   max-width: 100%;
+   height: auto;
+   border: 3px solid #5532A0;
+}
+
+.tarjeta-zoom button{
+    width: 4rem;
+}
+
+.tarjeta-zoom label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* #categoria {
+    overflow: auto;
+} */
+
+
+
+
+/* ASIDE */

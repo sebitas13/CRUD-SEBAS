@@ -1,0 +1,19 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "Un simple CRUD",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "js",
+    "html",
+    "css"
+  ],
+  "author": "Jesus Sebastian Huamanculi",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
