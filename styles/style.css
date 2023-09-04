@@ -243,9 +243,15 @@ table .icon img:hover {
 /* formulario */
 
 aside{
+
+    
+    
+
+
+
     background-color: rgb(51, 51, 51,0.8);
     /* background-color: #1F1F1F; */
-    height: 80vh;
+    height: 75vh;
     padding: 1rem;    
     width: 450px;
     box-sizing: border-box;
@@ -358,6 +364,7 @@ aside form select {
     padding: 0.5rem 0;
     border-radius: 10px;
     border: 2px solid #5532A0;
+    
 }
 
 label p {
