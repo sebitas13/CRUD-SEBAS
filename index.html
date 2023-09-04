@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>CRUD</title>
+</head>
+
+<body>
+    
+    <header>
+        <ul class="menu">
+           <a href="index.html" class="logo-home"> <li class="logo-ingles"><img src="assets/images/duolingo.png" alt="">
+           </li></a>
+            
+            <!-- <li>
+                <a href="#footer">Contactanos</a>
+            </li> -->
+
+            <li>
+                <a href="#">JS CRUD OPERATIONS</a>
+            </li>
+            
+           
+            
+        </ul>
+
+        
+
+        
+    </header>
+    <main>
+        <div class="tarjeta-zoom" data-id="zx">
+            
+            
+            <img id="imagen_zoom" src="" alt="">
+            <label for="imagen_titulo"> 
+                    <h6>Name: </h6>
+                    <p id="imagen_titulo" ></p>
+            </label>
+            <label for="imagen_descripcion"> 
+                <h6>Description: </h6>
+                <p id="imagen_descripcion" ></p>
+            </label>
+            <label for="imagen_categoria"> 
+                <h6>Category: </h6>
+                <p id="imagen_categoria" ></p>
+            </label>
+            
+
+            <button id="btnClose" onclick="onclickClosedPreview()">Close</button>
+            
+        </div>
+        
+        <section>
+            
+            <div class="opciones">
+                <button id="btnLimpiar" onclick="limpiarTabla()"><p>Delete All</p></button>
+                <div class="caja-busqueda">
+                    <input type="text" id="busqueda">
+                    <img src="assets/images/icons/search_954591.png" alt="lupa" class="icono-lupa">
+                </div>
+                
+                <img src="assets/images/icons/add_5251418.png" alt="" class="icon-add" onclick="mostrarFormulario(1)">
+
+            </div>
+            <div class="container-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Categoria</th>
+                            <th>Imagen</th>
+                            <th>View</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img src="" alt="">
+                            </td>
+                            <td class="icon">
+                                <img src="assets/images/icons/eye_535193.png" alt="">
+                                <div class="zoom">
+                                    <img src="assets/images/icons/eye_535193.png" alt="">
+                                </div>
+                            </td>
+                            <td>edit</td>
+                            <td>borrar</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <aside>
+            <img src="assets/images/icons/remove_1828843.png" alt="" class="icon-remove" onclick="mostrarFormulario(0)">
+            <form action="#" id="formulario">
+                
+
+                
+                <label for="nombre" ><p>Name:</p> <input type="text" id="name" placeholder="..." name="name"></label>
+                <label for="descripcion" ><p>Description:</p> <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="..."></textarea></label>     
+                <select  name="categoria" id="categoria">
+                    <option value="" disabled selected>Category</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Entertaiment">Entertaiment</option>
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Art">Art</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Culture">Culture</option>
+                    <option value="Culture">Random</option>
+                  
+                </select>
+                <input type="file" id="inputImagen">
+                <div class="imagen">
+                    <img src="" id="imagenFormulario" alt="">
+                </div>
+                <button type="submit" id="btnAgregar"><p>Nuevo</p></button>
+        
+            </form>
+            
+        </aside>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
